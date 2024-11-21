@@ -1,7 +1,7 @@
 zerops:
   - setup: api
     build:
-      base: elixir@latest
+      base: elixir@1.16
       envVariables:
         MIX_ENV: prod
         DATABASE_URL: ${db_connectionString}/${db_dbName}
