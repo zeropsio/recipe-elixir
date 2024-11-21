@@ -1,5 +1,5 @@
 # Zerops x Elixir
-This is a bare-bones example of an Elixir application running on [Zerops](https://zerops.io) — featuring a simple HTTP endpoint with PostgreSQL database integration.
+This is a bare-bones example of an Elixir application running on [Zerops](https://zerops.io) — as few libraries as possible, just a simple endpoint with connnect, read and write to a Zerops PostgreSQL database.
 
 ![elixir](https://github.com/zeropsio/recipe-shared-assets/blob/main/covers/svg/cover-elixir.svg)
 
