@@ -1,0 +1,24 @@
+zerops:
+  - setup: api
+    build:
+      base: elixir@latest
+      envVariables:
+        MIX_ENV: prod
+        DATABASE_URL: ${db_connectionString}/${db_dbName}
+      buildCommands:
+        - mix deps.get --only prod
+        - mix ecto.create
+        - mix ecto.migrate
+        - mix compile
+        - mix release --overwrite
+      deployFiles: _build/prod/rel/app/~
+    run:
+      base: elixir@latest
+      envVariables:
+        DATABASE_URL: ${db_connectionString}/${db_dbName}
+        PORT: 4000
+        POOL_SIZE: 10
+      ports:
+        - port: 4000
+          httpSupport: true
+      start: bin/app start
