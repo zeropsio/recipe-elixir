@@ -13,7 +13,7 @@ zerops:
         - mix release --overwrite
       deployFiles: _build/prod/rel/app/~
     run:
-      base: elixir@latest
+      base: alpine@latest
       envVariables:
         DATABASE_URL: ${db_connectionString}/${db_dbName}
         PORT: 4000
