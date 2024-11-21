@@ -44,7 +44,7 @@ Base of the recipe is ready for production. For production deployment, consider:
 
 Additional production considerations:
 - Use Zerops object storage for file storage
-- Implement Redis (KeyDB) for caching and session management
+- Implement Redis (Valkey) for caching and session management
 - Add comprehensive logging and monitoring
 - Implement proper error handling and reporting
 
