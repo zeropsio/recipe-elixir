@@ -5,7 +5,7 @@ project:
     
 services:
   - hostname: api
-    type: elixir@latest
+    type: elixir@1.16
     enableSubdomainAccess: true
     buildFromGit: https://github.com/zeropsio/recipe-elixir
     
