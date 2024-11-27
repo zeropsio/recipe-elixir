@@ -12,4 +12,3 @@ services:
   - hostname: db
     type: postgresql@16
     mode: NON_HA
-    priority: 1
