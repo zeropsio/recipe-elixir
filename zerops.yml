@@ -5,7 +5,7 @@ zerops:
       envVariables:
         MIX_ENV: prod
         DATABASE_URL: ${db_connectionString}/${db_dbName}
-      prepareCommands:
+      initCommands:
         - mix deps.get --only prod
         - mix ecto.create
         - mix ecto.migrate
