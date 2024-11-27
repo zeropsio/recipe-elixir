@@ -6,10 +6,10 @@ zerops:
         MIX_ENV: prod
         DATABASE_URL: ${db_connectionString}/${db_dbName}
       prepareCommands:
+        - mix deps.get --only prod
         - mix ecto.create
         - mix ecto.migrate
       buildCommands:
-        - mix deps.get --only prod
         - mix compile
         - mix release --overwrite
       deployFiles: _build/prod/rel/app/~
